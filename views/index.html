@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='./src/style.css' rel="stylesheet">
+    </link>
+    <script src="https://kit.fontawesome.com/46d1777388.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="bgColor">
+        <div class="container">
+            <div class="row justify-content-center align-items-center h-100">
+                <div data-aos="fade-up" class="w-100 h-50 bg-secondary row justify-content-center align-items-center shadowBox ">
+                    <!-- box Left -->
+                    <div class="col-6 p-0 m-0 h-100">
+                        <img src="./assets/imageTwo.jpg" alt="image" style="width: 100%; height: 100%;">
+                    </div>
+                    <!-- box Right -->
+                    <div class="col-6 h-100 bg-white d-flex flex-column justify-content-center align-items-center">
+                        <form class="w-50 h-75 d-flex flex-column justify-content-center align-items-start" action="">
+                            <span class="fontBold">EMAIL ADDRESS</span>
+                            <input type="text" id="username" name="username" class="boxInput">
+                            <span class="mt-5 fontBold">SET PASSWORD</span>
+                            <input type="password" id="password" name="password" class="boxInput">
+                            <div class="row m-0 mt-5 w-100 align-items-center">
+                                <input type="checkbox" name="checkBox">
+                                <span class="fontRegular ml-3">I agree to the terms of services</span>
+                            </div>
+                            <button onclick="SubmitForm(event)" type="button" class="btn btn-warning w-50 mt-5 rounded-pill">Warning</button>
+
+                        </form>
+                        <code class="pt-4 d-none" id="error">username or password is incorect</code>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script src="./src/index.js"></script>
+</body>
+
+</html>
