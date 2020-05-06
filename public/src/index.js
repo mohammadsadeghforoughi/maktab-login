@@ -6,32 +6,49 @@ AOS.init({
 });
 
 const SubmitForm = (e) => {
-  // e.preventDefault();
-
+  console.log('salaaam')
+  e.preventDefault();
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
-  console.log(username, password);
-  $.ajax({
-    url: "/login",
-    method: "POST",
-    data: {
-      username,
-      password,
-    },
-    success: function (result) {
-      console.log(result);
-      if (result == "success") {
-        showError(false);
-        window.location.href = "http://www.w3schools.com";
-      } else {
-        showError(true);
-      }
-    },
+
+  axios.post('/login', {
+    username,
+   password,
+  })
+  .then(function (response) {
+    console.log(response.data);
+    if (response.data == "success") {
+            showError(false);
+            window.location.href = "http://www.w3schools.com";
+          } else {
+            showError(true);
+          }
+  })
+  .catch(function (error) {
+    console.log(error);
   });
+  // $.ajax({
+  //   url: "https://localhost:3000/login",
+  //   method: "POST",
+  //   data: {
+  //     username,
+  //     password,
+  //   },
+  //   success: function (result) {
+  //     console.log(result);
+  //     if (result == "success") {
+  //       showError(false);
+  //       window.location.href = "http://www.w3schools.com";
+  //     } else {
+  //       showError(true);
+  //     }
+  //   },
+  // });
 };
 
 function showError(show = false) {
   let errorEL = document.getElementById("error");
+  $('#error').show
   if (show) {
     errorEL.classList.remove("d-none");
     errorEL.classList.add("d-inline");

@@ -8,6 +8,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/login", function (req, res, next) {
+  console.log('/login')
   const { username, password } = req.body;
   if (username === "admin" && password === "root") {
     res.send("success");
@@ -15,4 +16,6 @@ router.post("/login", function (req, res, next) {
     res.send('401');
   }
 });
+
+
 module.exports = router;
